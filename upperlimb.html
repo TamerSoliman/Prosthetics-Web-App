@@ -1,0 +1,89 @@
+{%extends "base.html"%}
+<title>Upper Limb Form</title>
+{%block content%}
+<form action="{{url_for("upperlimb")}}" method="post">
+{{form.hidden_tag()}}
+
+{{form.shoulder_height.label}}:
+{{form.shoulder_height(placeholder="In Millimeters")}}
+{%for error in form.shoulder_height.errors%}
+{{error}}
+{%endfor%}
+<br>
+<br>
+{{form.chest_height.label}}:
+{{form.chest_height(placeholder="In Millimeters")}}
+{%for error in form.chest_height.errors%}
+{{error}}
+{%endfor%}
+<br>
+<br>
+{{form.waist_length.label}}:
+{{form.waist_length(placeholder="In millimeters")}}
+{%for error in form.waist_length.errors%}
+{{error}}
+{%endfor%}
+<br>
+<br>
+{{form.gender.label}}:
+{{form.gender(placeholder="0 for female 1 for male")}}
+{%for error in form.gender.errors%}
+{{error}}
+{%endfor%}
+<br>
+<br>
+{{form.age.label}}:
+{{form.age(placeholder="Round up ")}}
+{%for error in form.age.errors%}
+{{error}}
+{%endfor%}
+<br>
+<br>
+{{form.foot1.label}}: 
+{{form.foot1(placeholder="In Millimeters")}}
+{%for error in form.foot1.errors%}
+{{error}}
+{%endfor%}
+<br>
+<br>
+{{form.foot2.label}}:
+{{form.foot2(placeholder="In Millimeters")}}
+{%for error in form.foot2.errors%}
+{{error}}
+{%endfor%}
+<br>
+<br>
+{{form.foreleg1.label}}:
+{{form.foreleg1(placeholder="In Millimeters")}}
+{%for error in form.foreleg1.errors%}
+{{error}}
+{%endfor%}
+<br>
+<br>
+{{form.foreleg2.label}}:
+{{form.foreleg2(placeholder="In Millimeters")}}
+{%for error in form.foreleg2.errors%}
+{{error}}
+{%endfor%}
+<br>
+<br>
+{{form.thigh1.label}}:
+{{form.thigh1(placeholder="In Millimeters")}}
+{%for error in form.thigh1.errors%}
+{{error}}
+{%endfor%}
+<br>
+<br>
+{{form.thigh2.label}}:
+{{form.thigh2(placeholder="In Millimeters")}}
+{%for error in form.thigh2.errors%}
+{{error}}
+{%endfor%}
+<br>
+<br>
+<br>
+{{form.submit}}
+
+</form>
+
+{%endblock%}

@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+
+{%if title%}
+<title>Prosthetics Web App: {{title}}</title>
+{%else%}
+<title>Prosthetics Web App</title>
+{%endif%}
+</head>
+<body>
+<hr>
+{%with messages=get_flashed_messages(with_categories=true)%}
+{%if messages%}
+<ul>
+{%for message in messages%}
+<li>{{message}}</li>
+{%endfor%}
+</ul>
+{%endif%}
+{%endwith%}
+
+
+{%block content%}
+{%endblock%}
+</body>
+</html>
