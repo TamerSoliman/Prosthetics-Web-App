@@ -15,30 +15,30 @@ Sandwiched between these 2 modules is a conditional-probability module that esti
 
 Details of the model building process can be found in the enclosed Jupiter notebook.  Briefly, separately for the upper and lower limbs, I built a cross-validated, l2-regularized regression model that takes anthropometric and demographic variables as predictors and returns an estimate of the limb length.
 
-This application  is just for demonstration purposes. The data I used to build the model can be found here (http://mreed.umtri.umich.edu/mreed/downloads.html#ansur). These are anthropometric measures that the US Army collected from its personnel’s decades ago, so it may not be representative of the current civilian population of the US or elsewhere. Although more representative and up-to-date data are available, I can not use them in a public repository given that participants were not consented for this kind of usage.
+This application  is just for demonstration purposes. The data I used to build the model can be found here(http://mreed.umtri.umich.edu/mreed/downloads.html#ansur). These are anthropometric measures that the US Army collected from its personnel’s decades ago, so it may not be representative of the current civilian population of the US or elsewhere. Although more representative and up-to-date data are available, I can not use them in a public repository given that participants were not consented for this kind of usage.
 
 #    Get Me Fixed!
 ##    How Can I Deploy It?
 
 On a Ubuntu 14.04 server, with a server-wide installation of Python 3.4, do the following:
 
-1. create a new directory, "prosthetics". Move inside this directory. Generate a virtual python environment as shown here (https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world). activate this virtual environment, then install the following python libraries:
+1. create a new directory, "prosthetics". Move inside this directory. Generate a virtual python environment as shown here(https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world). activate this virtual environment, then install the following python libraries:
 pip install  Flask, Flask-WTF, numpy, scipy, sklearn, pandas
 
 2.  Create a new directory, "app" inside the "prosthetics" directory. Move the following files from the current repository to the "app" directory:
 
-*  forms.py
-* views.py
-*  model_lower.pkl
-*  model_upper.pkl
+	*  forms.py
+	* views.py
+	*  model_lower.pkl
+	*  model_upper.pkl
 
 3. Create a new directory, "templates", inside the "app" directory. Put the following html files inside this new directory:
 
-* base.html
-* instructions.html
-* lowerlimb.html
-* upperlimb.html
-* result.html
+	* base.html
+	* instructions.html
+	* lowerlimb.html
+	* upperlimb.html
+	* result.html
 
 4. Now run the application as a python script. On your command line, type the following:
 
@@ -53,3 +53,12 @@ Ideally, you should get a confirmation message declaring that your application i
 * http://localhost:5000/upperlimb
 
 6. Finally, try out filling in some values in the upper-limb or lower-limb form then submit the form. You should get an estimate of the length of the requested limb, returned on a simple web page.
+
+
+Enjoy!
+
+	#Whom Should You Blame?
+
+Well, No one but yourself! I offer no warrantee, implied or explicit, for the code in any of my repositories. Use it at your own risk and discretion. I accept no liability, whatsoever, as a result of using it, or using a modified version of it!
+
+Tamer Soliman, the author of this repository, has been immersed in data collection and statistical modeling since 2002. He holds a PhD in quantitative Experimental Psychology, where he designs experiments to understand and model human cognition, decision making, socio-cultural behavior, attitudes, and actions. He develops data-centered utilities and applications that subserve his data-science and machine-learning projects. While he approaches his projects with the mindset of a skeptic homo-academicus,  he understands the concept of "deadlines", and loves making money just as all other homo-sapiens!
