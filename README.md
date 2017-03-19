@@ -41,16 +41,14 @@ pip install  Flask, Flask-WTF, numpy, scipy, sklearn, pandas
 	* result.html
 
 4. Now run the application as a python script. On your command line, type the following:
-
 python3 views.py
-
 Ideally, you should get a confirmation message declaring that your application is being served and can be requested by a web browser.
 
 5. Now use a browser on the Ubuntu machine, or any other machine on the network, to visit the following 3 URL's:
 
-* http://localhost:5000/instructions
-* http://localhost:5000/lowerlimb
-* http://localhost:5000/upperlimb
+	* http://localhost:5000/instructions
+	* http://localhost:5000/lowerlimb
+	* http://localhost:5000/upperlimb
 
 6. Finally, try out filling in some values in the upper-limb or lower-limb form then submit the form. You should get an estimate of the length of the requested limb, returned on a simple web page.
 
